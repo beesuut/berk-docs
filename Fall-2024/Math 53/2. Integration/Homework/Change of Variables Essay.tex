@@ -1,0 +1,129 @@
+\documentclass{notes}
+\graphicspath{{../Images/}}
+
+\fancyhead[l]{Jonathan Cheng}
+\fancyhead[c]{Math 53}
+\fancyhead[r]{November 4, 2024}
+\fancyfoot[c]{Page \thepage\ of \pageref{LastPage}}
+
+\begin{document}
+
+\section*{Change Of Variables}
+
+Change of variables allows you to evaluate an integral in a different coordinate system. This can be useful in simplifying the integral to make it easier to compute. While this is not immediately obvious, this is the fundamental concept behind `u substitutions' in 1d calculus.
+
+\subsubsection*{Double Integrals}
+
+In order to understand change of variables, some fundamentals need to be built up. In 1d calculus, integrals were evaluated over an area by cutting the area into slices of width \(\Delta x\) and summing up the areas \(\int_{a}^{b} f(x)\,dx = \lim_{n \to \infty} (\sum_{i=1}^{n}f(x_i)\Delta x)\) where \(\Delta x = \frac{(b-a)}{n}\).
+
+In 2 dimensions, rather than multiplying the bottom length by a height \(y\), a small bottom area is multiplied by a height \(z\). This bottom area can be represented as the quantity \(\Delta x \Delta y\), where \(\Delta x = \frac{(b-a)}{n}, \Delta y = \frac{(d-c)}{m}\) such that
+
+\[\int_{a}^{b} \int_{c}^{d} f(x, y)\, dx\, dy = \lim_{m, n \to \infty} (\sum_{j = 1}^{m}\sum_{i = 1}^{n}f(x_{ij}, y_{ij})\Delta x \Delta y)\]
+
+Visually, this creates manny small pillars whose volume can be added to approximate the area under the 2d curve. The double integral over the rectangle R is written as 
+
+\[\iint_{R}f(x, y)\,dA\]
+
+\subsubsection*{Partial Integration}
+
+When evaluating double integrals, a procedure called partial integration is used. For a partial integration with respect to x, the notation \(\int_{a}^{b}f(x, y)\, dx\) is used to mean that \(y\) is fixed and \(f(x, y)\) is integrated with respect to \(x\) from \(a\) to \(b\).
+
+As an example, the integral \(\int_{c}^{d}[\int_{a}^{b}f(x, y)\, dx]\,dy\) is first evaluated as a partial integral of \(x\) from \(a\) to \(b\) and then in \(y\) from \(c\) to \(d\).
+
+\subsubsection*{General Regions}
+
+For single integrals, the regions of integration is always an interval, but for double integrals, it is useful to integrate over shapes, rather than just rectangles. Given a region D which lies between 2 functions of one variable, a double integral can be used to represent its area.
+
+\image{Region}{Region}{Example Region}{200pt}
+
+In the example region, the integral of \(x\) still ranges from \(a\) to \(b\), but the bounds of y are now \(g_1(x)\) and \(g_2(x)\) respectively. This can be thought of as the bounds of \(y\) changing depending on the particular value of \(x\) being evaluated. This integral can be written as
+
+\[\iint_D f(x, y)\, dA = \int_{a}^{b}\int_{g_1(x)}^{g_2(x)}f(x, y)\,dy \,dx\]. Similarly, if the regions was bounded by functions of \(y\), the first iterated integral could be evaluated with respect to \(x\), outputting a function of only \(y\) to the second integral.
+
+Importantly, when integrating over these regions, the integral with functional bounds (\(g_1(x), g_2(x)\)) will output a function of x rather than a number. Therefore, it follows that this output variable (x) must be evaluated later rather than earlier (this order is particularly important for triple or higher integrals).
+
+\subsubsection*{Polar Coordinates}
+
+The area of sector can be broken up into subregions of `height' \(dr\) and `width' \(r \, d\theta\) This can be thought of geometrically as the area of a small rectangle. The height of the rectangle is along the straight line with length \(dr\) which accounts for itself. The width of this rectangle, however is curved. Because polar curves go around a circle, the length of this side is the length of an arc, which is \(r \, d\theta\). Thus, the region \(dA = dx \, dy = r \, dr \, d\theta\). Because of this, an area integrated in polar coordinates is
+
+\[\int_{\alpha}^{\beta}\int_{a}^{b}f(rcos(\theta), rsin(\theta))\, r \, dr \, d\theta\]
+
+Just as with general regions of rectangles, general regions can be evaluated using polar.
+
+\image{Polar Region}{Polar Region}{Example Polar Region}{200pt}
+
+\[\int_{\alpha}^{\beta}\int_{h_1(\theta)}^{h_2(\theta)}f(rcos(\theta), rsin(\theta))\, r \, dr \, d\theta\]
+
+\subsubsection*{Triple Integrals}
+
+By much the same logic as with double integrals, triple integrals can be defined as follows.
+
+\[\iiint_E f(x, y, z)\, dV = \int_{a}^{b}\int_{c}^{d}\int_{r}^{s}f(x, y, z)\, dz \, dy \,dx\]
+
+By summing small volumes \(dx \,dy \,dz\) multiplied by a `height' \(f(x, y, z)\), a Riemann approximation for hyper-volumes emerges. And just as with double integrals, more general regions can be created.
+
+\[\iiint_E f(x, y, z)\, dV = \int_{a}^{b}\int_{g_1(x)}^{g_2(x)}\int_{h_1(x, y)}^{h_2(x, y)}f(x, y, z)\, dz \, dy \,dx\]
+
+As before, it can be noted the order that the integrals is important if the integral is to output a number.
+
+\subsubsection*{Cylindrical Coordinates}
+
+In a cylindrical coordinate system, a point is represented by the ordered triple \((r, \theta, z)\). As implied by the name, it evaluates double integrals by forming thin cylindrical shells. The base of this cylindrical shell is already known as \(r\,dr\,d\theta\) as in the case of polar coordinates. The third integral adds a \(z\) component. Because the z component is along the height of the cylinder, it is perfectly straight and therefore contributes a quantity \(dz\). Therefore, in cylindrical coordinates, \(dV = r\,dr\,d\theta\,dz\)
+
+Another way of going about this change is by seeing \(x = r \cos(\theta), y = r \sin(\theta), z = z\). The \(x\) and \(y\) components are the same as in polar coordinates, and the \(z\) component stays exactly the same.
+
+Cylindrical coordinates are particularly useful when there is symmetry about an axis (in this example \(z\)).
+
+\subsubsection*{Spherical Coordinates}
+
+Spherical coordinates are useful when there is symmetry about a point, used as the origin. These coordinates are represented by the triple \((\rho, \theta, \phi)\) where \(\rho\) is the distance from the origin, \(\theta\) is the same as in cylindrical coordinates, and \(\phi\) is the angle from the vertical.
+
+\image{Sphere}{Sphere}{Spherical Coordinates}{200pt}
+
+As in the polar and cylindrical case, the contribution of \(\rho\) to the volume is \(d\rho\) because its contribution is in a straight line. The contribution of \(\phi\) is scaled because it is curved around the sphere of radius \(\rho\). Thus by the arc length formula, the contribution is \(\rho \,d\phi\). The contribution of \(\theta\) is around a circle of radius \(r\) where \(r = \rho sin(\phi)\). Thus, by the same arc length formula, the contribution is \(r \,d\theta = \rho \sin(\phi)\, d\theta\). In total, the volume \(dV = \rho^2 \sin(\phi) \,d\rho\,d\theta\,d\phi\)
+
+\subsubsection*{Change of Coordinates}
+
+It has been seen that a change of variables (coordinates) can be useful, but that it is not as simple as using 3 new variables. Polar and cylindrical had an additional factor of \(r\), while spherical has \(\rho^2 \sin(\phi)\). If there were an easy way to find this factor for any set of coordinates, a change of variables would become much easier.
+
+Picture a rectangle S in the \((u, v)\) plane with corner \((u_0, v_0)\), height \(\Delta v\) and width \(\Delta u\). This is transformed into a region R in \((x, y)\) with corner\((x_0, y_0)\), and length curves \(r(u_0, v), r(u, v_0)\) where \(r(u, v) = g(u, v) \uvec{i} + h(u, v) \uvec{j}\).
+
+\image{Transform}{Transform}{Transformation}{200pt}
+
+The  region R can be approximated as a parallelogram of the secant vectors \(\vec{a} = \vec{r}(u_0 + \Delta u, v_0) = \vec{r}(u_0, v_0)\) and \(\vec{b} = \vec{r}(u_0, v_0 + \Delta v_0) = \vec{r}(u_0, v_0)\).
+
+As \(\Delta u, \Delta v \to 0\), these vectors take the same form as the limit definition of the partial derivative, excluding the \(\Delta u, \Delta v\) in the denominator, and so \(\vec{a} = \Delta u \vec{r}_u\) and \(\vec{b} = \Delta v \vec{r}_v\).
+
+The area of a parallelogram spanned by two vectors is equivalent to the magnitude of their cross product, and thus 
+
+\[\Delta x \, \Delta y = |(\Delta u \vec{r}_u \times \Delta v \vec{r}_v)| = |\vec{r}_u \times \vec{r}_v|\Delta u \, \Delta v\]
+
+This determinant is called the Jacobian and is notated as \(\pd{(x, y)}{(u, v)} =
+\begin{vmatrix}
+    \pd{x}{u} & \pd{x}{v} \\[10px]
+    \hfill
+    \pd{y}{u} & \pd{y}{v}
+\end{vmatrix}
+\)
+
+Taking the limit to make the approximation exact, any coordinate can be transformed into another through the form
+
+\[dx \, dy = \Bigg|\pd{(x, y)}{(u, v)}\Bigg|\,du \, dv\]
+
+With similar logic, for triple integrals,
+
+\[\iiint_Rf(x, y, z)\,dx\,dy\,dz = \iiint_S f(x(u, v, w), y(u, v, w), z(u, v, w))\Big| \pd{(x, y, z)}{(u, v, w)}\Big|\,du\,dv\,dw\]
+
+\subsubsection*{Testing}
+
+To determine that the new formula makes sense, we will test it against the known example of polar coordinates. Given \(f(x, y, z) = 1\), we should expect \(\iint_D \,dx\,dy = \iint_D \,r\,dr\,d\theta\).
+
+In 2d, the Jacobian is \(\pd{x}{r}\pd{y}{\theta}- \pd{x}{\theta}\pd{y}{r}\). Knowing \(x = r\cos(\theta), y = r \sin(\theta)\),
+
+\begin{align*}
+    dx \,dy &= ((\cos(\theta))(r\cos(\theta)) - (-r\sin(\theta))(sin(\theta)))\,dr\,d\theta\\
+    dx\,dy&= r(\cos^2(\theta)+ \sin^2(\theta))\,dr\,d\theta\\
+    dx \,dy &= r \,dr\,d\theta
+\end{align*}
+
+\end{document}
