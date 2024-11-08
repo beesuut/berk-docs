@@ -1,0 +1,207 @@
+\documentclass{notes}
+\graphicspath{{../Images/}}
+
+\fancyhead[l]{Jonathan Cheng}
+\fancyhead[c]{MCB 55}
+\fancyhead[r]{September 18, 2024}
+\fancyfoot[c]{Page \thepage\ of \pageref{LastPage}}
+
+\begin{document}
+
+\section*{Escherichia Coli}
+Gram negative bacillus (rod)
+
+Many flagella
+
+Grows very fast (20 minute doubling time)
+
+\subsection*{Genetic Diversity}
+Every E. coli strain must have 2,167 core genes (Most viruses have around 20 total)
+
+4,271 total genes on average
+
+10,131 possible genes (Most strains are benign)
+
+Acquisition of mobile genetic elements can change E. coli from a commensal to a highly adapted and deadly pathogen
+
+\subsection*{8 ``Pathovars'' of Pathogenic E. Coli}
+Serovar: Distinct variation of bacteria
+
+Pathovar: Serovar for pathogens
+
+\(\sim\)400 million infections
+
+Types of E. Coli:
+\begin{enumerate}
+    \item Enterohaemorrhagic (EHEC)
+    \item Enteropathogenic (EPEC)
+    \item Uropathogenic (UPEC)
+    \item Diffusely Adherent (DAEC)
+    \item Enteroinvasive (EIEC)
+    \item Enteroaggregative (EAEC)
+    \item Neonatalmeningitis (NMEC)
+\end{enumerate}
+
+\subsection*{EPEC vs. EHEC / STEC}
+EPEC:
+\begin{enumerate}
+    \item Causes childhood diarrhea
+    \item Transmits human to human
+    \item No Shiga toxin
+\end{enumerate}
+
+EHEC / STEC
+\begin{enumerate}
+    \item Food/water-borne pathogen in industrialized countries
+    \item Zoonotic from cattle or other animals
+    \item Secreted Shiga toxin can lead to Hemolytic Uremic Syndrome (HUS)
+    \subitem Lysed cells can clog kidneys and lead to kidney failure
+    \item 265,000 illneses each year in the US
+    \item 3,600 hospitalizations
+    \item 30 deaths
+\end{enumerate}
+
+Both have same mechanism of intestinal colonization
+
+\subsubsection*{How do bacteria not get washed out of intestine?}
+Attatch via pedestals
+
+EHEC / EPEC induce pedestal formation to stay attatched
+
+\begin{enumerate}
+    \item Inject E. coli receptor protein into epithelial cells
+    \item E. coli protein in epithelial cells binds to the bacteria enabling attachment
+\end{enumerate}
+
+\subsection*{Serotyping by E. Coli Antigens}
+Surface antigens include polysaccharide side chains (O antigen), capsular antigen (K), and flagellar protein (H)
+
+200 O antigens, 80 K antigens, and 56 H antigens
+
+\tab \indicates Flagella is 1 PAMP, but 56 different possible antigens
+
+\section*{EHEC / STEC}
+EHEC (Shiga toxin producing E. coli)
+
+Found on contaminated beef
+
+Several serotypes in EHEC frequently associated with human disease
+
+\begin{enumerate}
+    \item \textbf{O157:H7}
+    \item O26:H11
+    \item O91:H21
+    \item O111:H8
+    \item O157:H7
+\end{enumerate}
+
+How does Shiga toxin work?
+
+\begin{enumerate}
+    \item Shiga toxin (Stx) genes are found in pathogenic E. coli and Shigella dysenteria
+    \item Forms a pentamer of B subunits that bind and enter host cells, allowing a single A subunit to enter the cell
+    \item The A subunit of the toxin injures the eukkaryotic ribosome and inhibits protein synthesis in target cells and can kill cells
+    \item Shiga toxin can attack epithelial cells, endothelial cells, and immune cells
+    \item Shiga toxin can attack cells in intestine (colitis / diarrhea) and kidney / endothelial cells in kidney (HUS)
+    \item Antibodies to Stx are protective against severe disease
+\end{enumerate}
+
+
+\subsection*{Outbreaks}
+Jack in the Box: 1992
+\begin{enumerate}
+    \item Over 600 people infected in 6 states
+    \subitem Mostly children
+    \subitem 4 deaths
+    \subitem 50 cases of kidney failure from HUS
+    \item Cause: Knowingly undercooking burgers
+\end{enumerate}
+
+2 class action suits and USDA began testing all ground beef in 1994
+
+\(\sim\)100,000 EHEC infections each year in the US
+
+\subsubsection*{How Did EHEC Acquire Shiga Toxin?}
+
+\begin{enumerate}
+    \item Virus infects and kills shigella
+    \item Virus picks up Stx gene piece
+    \item Virus infects commensal E. coli
+    \item Stx phage integrates into E. coli genome
+\end{enumerate}
+
+\subsection*{Transmission in Animals}
+Healthy cattle are the major reservoirs of E. coli O157:H7
+
+Contaminated bovine products and crops are predominant sources for human infections
+
+Animal transmission through fecal contamination of food or water
+
+``Super-shedder'' cows: Colonized at rectum for long periods of time, shedding more than 95\% of E. coli in a herd
+
+\subsection*{Human Transmission}
+
+Undercooked or unpasteurized animal products
+\begin{enumerate}
+    \item Ground Beef
+    \item Other Meats
+    \item Milk, Cheese
+\end{enumerate}
+
+Foods contaminated with animal feces
+\begin{enumerate}
+    \item Fruits
+    \item Vegetables
+\end{enumerate}
+
+Contaminated water
+\begin{enumerate}
+    \item Wells
+    \item Swimming (lakes, streams)
+\end{enumerate}
+
+Contaminated soil
+\begin{enumerate}
+    \item Campgrounds
+    \item Sites grazed by livestock
+\end{enumerate}
+
+\subsection*{Disease in Humans}
+Hemorrhagic Colitis
+\begin{enumerate}
+    \item Bloody diarrhea
+    \item Sever abdominal cramps
+    \item Possibly fever, nausea, vomiting
+    \item Many cases are self limiting and resolve in \(\sim\)1 week
+\end{enumerate}
+
+Hemolytic Uremic Syndrome (HUS)
+\begin{enumerate}
+    \item Children, elderly, immunocompromised
+    \item Kidney failure, hemolytic anemia, thrombocytopenia (tiny blood clots clog capillaries)
+\end{enumerate}
+
+\subsection*{Treatment}
+\begin{enumerate}
+    \item Mainly supportive
+    \item Antibiotics are usually avoided as they may not reduce symptoms, prevent complications, nor reduce shedding of bacteria
+    \item May even increase risk of HUS
+\end{enumerate}
+
+\section*{Salmonella Enterica}
+Comprises a number of subspecies, all of which are common sources of food poisoning
+
+2 main serovars:
+\begin{enumerate}
+    \item S. Typhimurium
+    \subitem Causes gastroenteritis
+    \subitem Short-term infection of GI tract
+    \subitem Broad range humans / animals
+    \item S. Typhi
+    \subitem Typhoid fever (Makes typhoid toxin)
+    \subitem Life threatening systemic infection
+    \subitem 3-5\% are carriers that shed at high levels
+    \subitem Human-specific
+\end{enumerate}
+
+\end{document}

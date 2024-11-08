@@ -1,0 +1,253 @@
+\documentclass{notes}
+\graphicspath{{../Images/}}
+
+\fancyhead[l]{Jonathan Cheng}
+\fancyhead[c]{MCB 55}
+\fancyhead[r]{September 9, 2024}
+\fancyfoot[c]{Page \thepage\ of \pageref{LastPage}}
+
+\begin{document}
+
+\section*{Acquisition of Immunity}
+\subsection*{Passive Immunity}
+Passive immunization = Transfer of antibodies
+
+\tab \indicates Antibodies can be transfered between people (and animals)
+
+\tab \indicates Any immune protection lasts as long as the antibodies are present
+
+Examples:
+\begin{enumerate}
+    \item Antitoxins (Antibodies from horses)
+    \subitem Diptheria
+    \subitem Tetanus
+    \subitem Botulinum
+    \item Antivenoms
+    \item Human gammaglobulin (IgG from many plasma donors)
+\end{enumerate}
+
+\subsubsection*{Maternal}
+\begin{enumerate}
+    \item IgG through placenta
+    \item IgA through breastmilk
+\end{enumerate}
+
+\subsection*{Active Immunization}
+Vaccines are usually \textbf{active} immunizations
+
+\tab \indicates Induce adaptive immune response similar to "natural infection"
+
+\tab \indicates Establishes memory T and B cells
+
+Most vaccines prevent disease but not infection
+innoculations \indicates immunizations \indicates vaccines
+
+immunization = any injection to illicit an immune response
+
+
+\subsubsection*{Preventive Vaccines}
+Given to naive individuals in order to provide protection from primary infection or prevent disease
+
+\subsubsection*{Therapeutic Vaccines}
+Given to infected individuals to prevent / reduce disease or stimulate anti-tumor response
+
+\subsection*{Smallpox Eradication (Vaccinia)}
+Why was eradication possible?
+
+\begin{enumerate}
+    \item No animal reservoir
+    \item Lifelong immunity
+    \item One serotype \(\rightarrow\) little antigenic variation
+    \subitem No repeat infections
+    \item Effective attenuated vaccine provided long-term immunity
+\end{enumerate}
+
+\subsection*{Routes for Vaccination}
+Many vaccines are given intramuscular or subcutaneous
+
+\tab \indicates Live polio virus and rotavirus vaccine given orally
+
+Immunization site will influece where immune responses are elicited but most vaccines are tested in easy to administer route and assessed for protection
+
+\subsubsection*{FluMist}
+Intranasal vaccine for influenza
+
+Replicates only in nasal cavity
+
+\subsubsection*{Flu Vaccine}
+100 million doses available each year
+
+Usually trivalent (With 3 different viral strains)
+
+Traditional approach: Identify ``new'' virulent strains, recombine, and grow in eggs
+
+\subsubsection*{Subcutaneous or Intradermal}
+Subcutaneous = under skin
+
+Intradermal = between skin layers (can see bubble under skin)
+
+Ex: Monkeypox
+
+Why this method?
+
+\tab \indicates Supposedly because of focus on skin
+
+\tab \indicates Likely just how it was tested
+
+\subsection*{Vaccines need Adjuvants}
+Adjuvants added in order to enhance immunogenicity
+
+\tab \indicates Activate macrophages and DCs to increase inflammation
+
+Old adjuvants were inorganic salts such as aluminum hydroxide, aluminum phosphate, or calcium phosphate
+
+\tab \indicates Newer adjuvants provide ligands to bind TLRs
+
+\tab \indicates AS01-AS06 are oil in water emulsions with Lipid A, or Saponin (detergent), or CpG (DNA)
+
+\tab \tab \indicates Contain PAMPS to activate inflammation via TLRs
+
+\subsection*{Dealing with Antigenic Variation}
+Some viruses have many different antigenic subtypes and high mutation rates
+
+\section*{Types of Vaccines}
+
+\subsection*{Attenuated Vaccines}
+Made by growing pathogen in non-human cell culture until pathogen is less virulent
+
+\tab \indicates Less virulent = Less pathogenic = Less disease-causing
+
+Ex:
+\begin{enumerate}
+    \item Oral Polio Vaccine (OPV)
+    \item Measles
+    \item Mumps
+    \item Rubella
+    \item Varicella Zoster Virus (VZV)
+\end{enumerate}
+
+Advantages:
+\begin{enumerate}
+    \item Self-replicating (low dose)
+    \item Real virus
+    \subitem No adjuvant
+    \subitem Authentic antigen presentation
+    \item More effective at eliciting CTLs
+\end{enumerate}
+
+Disadvantages
+\begin{enumerate}
+    \item If vaccine replicates, it could infect other people and become virulent
+    \item Does not deal with strain variability / antigenic variation
+\end{enumerate}
+
+\subsection*{Inactivated Vaccines}
+Killed (inactivated) whole organism OR inactivated toxin
+
+\tab \indicates Done by heat, chemicals, or irradiation
+
+Ex:
+\begin{enumerate}
+    \item Influenza
+    \item Hepatitis A
+    \item Pertussis
+    \item Salk inactivated polio vaccines (IPV)
+    \item Tetanus
+    \item Diptheria
+\end{enumerate}
+
+Advantages: No revirulence (more safe)
+
+Disadvantages: No replication (poor antigen presentation)
+
+\subsection*{Live Vector Vaccines}
+Insert genes from pathogen into a well characterized vaccine vector
+
+Ex: 
+\begin{enumerate}
+    \item Vaccinia
+    \item Adenovirus
+    \item Salmonella
+    \item Vesicular stomatitus
+\end{enumerate}
+
+Advantages:
+\begin{enumerate}
+    \item Self replicating
+    \item No adjuvant needed
+\end{enumerate}
+
+Disadvantages: Live vector could be an issue with potential pathogenesis
+
+\subsection*{Recombinant Protein Vaccines}
+Identify immunogenic proteins by its envelope or outer membrane
+
+Advantages: Less expensive and very safe
+
+Disadvantages: Need adjuvant and boosters (may not elicit long-term memory)
+
+Ex: Human Papilloma Virus (HPV) Vaccine
+
+\tab \indicates Mimics structure without containing any HPV viral DNA
+
+\subsection*{Viral Spike Protein}
+Key target of neutralizing antibodies
+
+Moderna's SARS CoV-2 mRNA Vaccine
+\begin{enumerate}
+    \item mRNA for spike protein inside lipid nanoparticles
+    \item Host cells "uptake" the spike and generate the protein
+    \item Proteins get released from cell to generate Th antibody response
+\end{enumerate}
+
+Advantages:
+\begin{enumerate}
+    \item Fast production and ease for inserting new viral strain into same mRNA vector
+    \item Mimics aspects of infection
+    \subitem Gets into cells
+    \subitem Makes proteins
+    \subitem Activates TLRs
+    \item Safer than most vaccine types
+\end{enumerate}
+
+Disadvantages:
+\begin{enumerate}
+    \item Must be encapsulated in lipids or sugars
+    \item Must be frozen
+    \item Not very stable once thawed
+\end{enumerate}
+
+Johnson and Johnson Adeno/Spike vaccine (66-72\% efficacy)
+\begin{enumerate}
+    \item Spike gene added to Adenovirus 26
+    \item Adenoviruses are common viruses
+\end{enumerate}
+
+\subsection*{Issues in Vaccine Development}
+Always tested first in young, healthy people
+
+\subsubsection*{Efficacy}
+Most common human vaccines are \textgreater 90\% protective
+
+Influenza vaccine is 20-70\% protective
+
+Different efficacy in adults, children, and immunocompromised individuals
+
+\subsubsection*{Cost}
+Most original attenuated vaccines were incredibly cheap
+
+The WHO Big Six cost les than \$1 per person
+\begin{enumerate}
+    \item Diptheria toxoid
+    \item Tetanus Toxoid
+    \item Acellular pertussis (DTap)
+    \item Polio
+    \item Measles
+    \item BCG
+\end{enumerate}
+
+New vaccines have high development costs
+
+\tab \indicates Can take years to go down depending on volume of production
+
+\end{document}
