@@ -1,0 +1,42 @@
+Fall 2024 (2)
+Intro Mechanics and Relativity (5A)
+Multivariable (53)
+
+Spring 2025 (4)
+Intro E&M, Waves, Optics (5B)
+Intro to Exp. Physics I (5BL)
+Linear Algebra & Diff. Eq. (54)
+  Intro to Mathematical Physics (89)
+Discrete Math (55)
+
+
+Fall 2025 (3)
+Intro Thermo & QM (5C)
+Intro to Exp. Physics II (5CL)
+Linear Algebra (110)
+
+Spring 2026 (2)
+QM I (137A)
+Intro to Analysis (104)
+
+Fall 2026 (3)
+QM II (137B)
+Analytic Mechanics (105)
+Intro to Abstract Algebra (113)
+
+Spring 2027 (4)
+E&M and Optics (110A)
+Physics Elective
+Intro to Complex Analysis (185)
+Math Elective
+
+Fall 2027 (3)
+Modern Physics and Advanced Electrical Laboratory I (111A)
+Statistical and Thermal Physics (112)
+Math Semi-Elective
+
+
+Spring 2028 (3)
+Modern Physics and Advanced Electrical Laboratory II (111B)
+Math Elective
+Math Semi Elective

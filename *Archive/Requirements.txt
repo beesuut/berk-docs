@@ -1,0 +1,59 @@
+
+
+University and Campus Requirements
+American Cultures *
+
+
+Breadth Requirements
+Biological Studies *
+Historical Studies *
+International Studies
+Philosophy and Values *
+Physical Sciences *
+Social and Behavioral Sciences *
+
+Lower Div Physics
+Intro Mechanics and Relativity (5A)
+Intro E&M, Waves, Optics (5B)
+Intro Exp. Physics I (5BL)
+Intro Thermo & QM (5C)
+Intro to Exp. Physics (5CL)
+
+Lower Div Math
+Multivariable (53)
+Linear Algebra & Diff. Eq. (54)
+  Intro to Mathematical Physics (P89)
+Discrete Math (55)
+
+Upper Div Physics
+Analytic Mechanics (105)
+QM I (137A)
+QM II (137B)
+E&M and Optics (110A)
+Modern Physics and Advanced Electrical Laboratory I (111A)
+Modern Physics and Advanced Electrical Laboratory II (111B)
+Statistical and Thermal Physics (112)
+Physics Elective
+Recommended: Intro to Computational Techniques in Physics (77)
+
+Upper Div Math
+Intro to Analysis (104)
+Linear Algebra (110)
+Intro to Abstract Algebra (113)
+Intro to Complex Analysis (185)
+2 Math Electives
+2 Semi-Electives
+  Computing
+    Programming for Math Applications (124)
+    Numerical Analysis (128A)
+    Numerical Analysis for Data Science and Statistics (156)
+  Geometry
+    Groups and Geometries (130)
+    Metric Diff. Geometry (140)
+    Elem. Diff. Topology (141)
+    Elem. Algebraic Topoligy (142)
+    Elemental Algebraic Geometry (143)
+  Logic and Foundations
+    Intro to Logic (125A)
+    Intro to Set Theory (135)
+    Incompleteness and Undecidability (136)
