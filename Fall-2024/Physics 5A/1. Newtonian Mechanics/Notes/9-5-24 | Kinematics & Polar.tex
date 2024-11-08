@@ -1,0 +1,40 @@
+\documentclass{notes}
+\graphicspath{{../Images/}}
+
+\fancyhead[l]{Jonathan Cheng}
+\fancyhead[c]{Physics 5A}
+\fancyhead[r]{September 5, 2024}
+\fancyfoot[c]{Page \thepage\ of \pageref{LastPage}}
+\numberwithin{equation}{subsection}
+
+\begin{document}
+
+\section{Kinematics}
+
+\begin{gather}
+    \vec{v}(t) = \vec{v_0} + \vec{a} t\\
+    \vec{r}(t) = \vec{r_0} + \vec{v_0} t + \frac{1}{2} \vec{a} t^2\\
+    \vec{v}^{\hspace*{1px}2}(t) = \vec{v_0}^2 + 2 \vec{a} \cdot (\vec{r_1} - \vec{r_0})\\
+    \vec{r} = \frac{\vec{v_0}+ \vec{v_1}}{2}t
+\end{gather}
+
+\section{Polar Coordinates}
+\begin{gather}
+    \hat{r} = cos(\theta)\hat{x}+sin(\theta)\hat{y}\\
+    \hat{\theta} = -sin(\theta)\hat{x}+cos(\theta)\hat{y}\\
+    \deriv{}{t}\hat{r} = \dot{\theta}\hat{\theta}
+\end{gather}
+\begin{gather}
+    \vec{r} = r(t) \cdot \hat{r}(t)\\
+    \vec{v} = \dot{r}\hat{r} +r\dot{\theta} \, \hat{\theta}\\
+    \vec{a} = (\ddot{r}-r\dot{\theta}^2)\hat{r} + (r\ddot{\theta} + 2\dot{r}\dot{\theta})\, \hat{\theta}
+\end{gather}
+
+\subsection{Uniform Circular Motion}
+\(\theta\) is constant in time
+\begin{gather}
+    \vec{v} = \omega r \, \hat{\theta}\\
+    \vec{a} = -\omega r^2 \hat{r}
+\end{gather}
+
+\end{document}
