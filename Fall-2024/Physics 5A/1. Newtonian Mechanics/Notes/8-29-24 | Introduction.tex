@@ -1,0 +1,68 @@
+\documentclass{notes}
+\graphicspath{{../Images/}}
+
+\fancyhead[l]{Jonathan Cheng}
+\fancyhead[c]{Physics 5A}
+\fancyhead[r]{August 29, 2024}
+\fancyfoot[c]{Page \thepage\ of \pageref{LastPage}}
+
+\begin{document}
+
+\section{What is Classical Mechanics?}
+
+Classical Mechanics (CM) - A theory (framework) for predicting the future location (trajectory) of particles given their current positions and velocities
+
+\[x_0, \,v_0 \rightarrow x(t), \,v(t) \quad \forall \, t>0\]
+\centerline{\(\implies\) deterministic ``clockwork'' universe}
+\vspace*{10px}
+
+Breaks down at:
+\begin{enumerate}
+    \item High Speeds (Special Relativity)
+    \item Large Mass (General Relativity)
+    \item Small Scale (Quantum Mechanics)
+\end{enumerate}
+
+\section{Notation}
+\subsection{Degrees of Freedom (dof)}
+Configuration - Set of numbers \(\{q_1, \dots, q_N\}\) required to specify the state of the mechanical system
+Each \(q_i\) is a degree of freedom (dof)
+\begin{enumerate}
+    \item 1 dof - \(x(t)\)
+    \item 2 dof - \(\vec{r}=\cv{x}{y}\)
+    \item 3 dof - \(\vec{r}= \begin{bmatrix}
+              x \\ y \\ z
+          \end{bmatrix}\)
+    \item 6 dof (Spin) - \{\(q_i\}=\{\vec{r}, \alpha, \beta, \delta\}\) Euler Angles
+    \item (Deformation) - Need field \(R(\theta, \phi)\)
+    \item Positions of every \(~10^{26}th\) atom
+\end{enumerate}
+
+For 1-6, Newton predicts trajectory \(q_i(t)\) from \(q_i(t=0), v_i(t=0)=\frac{dq_i}{dt}=\dot{q}_i\)
+
+\hspace*{0.5in} \(\implies\) Physics is all about making ``things as simple as possible, but no simpler'' (Einstein)
+\newpage
+\section{Dimensional Analysis}
+
+ [\(\dots\)] = Dimension of \(\dots\)
+
+If answer is \(A=B\), check that \([A]=[B]\)
+
+\begin{table}[h]
+    \caption{Base Quantities}
+    \label{Dimensional Analysis}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|}
+            \hline
+            Quantity & Length    & Time       & Mass          \\
+            \hline
+            SI Unit  & meter 'm' & second 's' & kilogram 'kg' \\
+            \hline
+            Measured & L         & T          & M             \\
+            \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\end{document}
+

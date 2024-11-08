@@ -1,0 +1,14 @@
+Midterm 1 | 20%
+
+Midterm 2 | 25%
+
+Final | 35%
+
+Homework | 20%
+    Assigned and Due Friday 17:00 on Gradescope
+
+Textbooks
+    1. D. Kleppner and R. Kolenkow, An Introduction to Mechanics
+        Chapters 1-5, 7, 9-14
+    2. A. P. French, Vibrations and Waves
+        Chapters 1-5, which has some overlap with KK 6, 11
