@@ -1,0 +1,15 @@
+\documentclass{notes}
+\graphicspath{{../Images/}}
+
+\fancyhead[l]{Jonathan Cheng, Holden Kowitt, Finnegan Wright}
+\fancyhead[c]{}
+\fancyhead[r]{Physics 77}
+\fancyfoot[c]{Page \thepage\ of \pageref{LastPage}}
+
+\begin{document}
+
+\tab Our plan is to create a crude nuclear fission reactor simulator. Trying to model full reactors is incredibly complex and there is already code out there to accomplish this. During research, we found that there is a `Monte Carlo N-Particle Transport Code' to model the neutron transport in reactors with realistic geometries, however in our crude reactor we would be able to write our own version of this code which would rely on some simplifications of the geometry of the system. The general idea of our reactor is to have a homogeneous spherical mixture of the fuel, moderator, and the controls. Using the cross-sections for a neutron interaction with the different components, we can calculate/use a Monte Carlo simulation to model how far a neutron will travel before interacting. This can be used to show how many neutrons will escape our `reactor', and using the remaining neutrons with those cross-sections from before we can calculate how many of each different type of interaction happens (the different options being absorption, scattering, and fission). Then from the number of each type of interaction we can make statements about our reactor like if it is critical or how much power is being produced.
+
+\tab If we finish the basis of the reactor early, there are several things we can do to add onto this project to make it scalable. One option is looking at the antineutrino flux out of the reactor, and comparing that with stellar anti neutrino flux we can see what sort of signal this reactor has. Another option could be looking at how much plutonium is produced by the reactor. And one final option could be adding in a component to represent fuel consumption/burn.
+
+\end{document}
