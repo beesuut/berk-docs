@@ -1,0 +1,101 @@
+\documentclass{notes}
+\graphicspath{{../Images/}}
+
+\fancyhead[l]{Jonathan Cheng}
+\fancyhead[c]{Math 53}
+\fancyhead[r]{December 6, 2024}
+\fancyfoot[c]{Page \thepage\ of \pageref{LastPage}}
+\usepackage{esint}
+
+\begin{document}
+
+\section*{Vector Calculus Essay}
+
+\subsection*{Multidimensional Fundamental Theorem of Calculus}
+
+The fundamental theorem of calculus states that \(\int_{a}^{b}F'(x)\,dx = F(b) - F(a)\). Taking the gradient of a scalar function \(f\) as the vector equivalent of a derivative, the fundamental theorem for line integrals states the following.
+
+\begin{equation}
+    \oint_C \grad f \cdot d\vec{r} = f(\vec{r}(b)) - f(\vec{r}(a))
+\end{equation}
+
+This states that a line integral of a gradient in any number of dimensions is equal to the difference between the scalar function at its two endpoints. In stating this, we negate the need to calculate the whole line integral, given the condition that the integrated vector function is the gradient of some scalar function.
+
+This condition is known as a conservative vector field, which has a number of distinct properties which are useful in vector calculus.
+
+\subsection*{Properties of Conservative Vector Fields}
+
+\textbf{Path Independence}
+
+By looking at the multidimensional fundamental theorem of calculus, it is clear that the value of a line integral of a conservative vector field is dependent only on its 2 endpoints. Therefore, it can be seen that the path taken by the line integral is irrelevant. Thus, path independence can be taken to be true.
+
+\textbf{Partial Derivatives}
+
+Taking \(\vec{F} = P \uvec{i} + Q \uvec{j}\), it can be determined that \(\deriv{P}{y} = \deriv{Q}{x}\).
+
+Because \(\vec{F} = \grad f\), \(\deriv{P}{y} = \frac{\partial^2 f}{\partial x \partial y} =\frac{\partial^2 f}{\partial y \partial x} = \deriv{Q}{x}\) by Clairaut's theorem.
+
+\subsection*{Green's Theorem}
+
+Green's Theorem acts as an equivalent to the fundamental theorem of calculus for double integrals. Given the same vector function \(\vec{F}\), 
+
+\begin{equation}
+    \oiint_D (\pd{Q}{x} - \pd{P}{y})\,dA = \int P\,dx + \int Q\,dy
+\end{equation}
+
+This states that the integral of the function \(\pd{Q}{x} - \pd{P}{y}\) over an area is equal to the amount of that quantity added up on the boundary curve of said area. In the same way that the fundamental theorem of calculus turns an integral into a calculation of boundary points, Green's Theorem turns a double integral into a calculation of boundary curves.
+
+First we will define 2 functions: curl and divergence.
+
+\begin{align}
+    \text{curl} (\vec{F}) &= \Big(\pd{R}{y} - \pd{Q}{z}\Big) \uvec{i} + \Big(\pd{P}{z} - \pd{R}{x}\Big) \uvec{j} + \Big(\pd{Q}{x} - \pd{P}{y}\Big) \uvec{k}\\[10pt]
+     &= \grad \times \vec{F}\\[30pt]
+    \text{div} (\vec{F}) &= \pd{P}{x} + \pd{Q}{y} + \pd{R}{z}\\
+    &= \grad \cdot \vec{F}
+\end{align}
+
+Noticing that the z component of the curl is equal to \(\pd{Q}{x} - \pd{P}{y}\), Green's Theorem can be rewritten in vector form as:
+
+\begin{gather}
+    \oint_C \vec{F}\cdot d\vec{r} = \oiint_D \text{curl} (\vec{F}) \cdot \uvec{k}\, dA
+\end{gather}
+
+In this form, it is much easier to see that Green's theorem equates the integral of the curl over an area to the line integral of the tangential components along the boundary.
+
+But the dot product implies that the tangential components along the boundary are being collected. What happens if we instead collect the normal components?
+
+\begin{gather}
+    \oint_C \vec{F} \cdot \uvec{n} \, ds = \oiint_D \text{div}(\vec{F}(x, y))\, dA
+\end{gather}
+
+This version of Green's theorem states that the double integral of the divergence of \(\vec{F}\) over a region is equal to the normal component of the vector along the boundary.
+
+\subsection*{Stokes' Theorem}
+
+Stokes' Theorem is an extension of Green's Theorem (curl) to higher dimensions. It states that
+
+\begin{gather}
+    \oint_C \vec{F} \cdot d\vec{r} = \oiint_S \text{curl}(\vec{F})\cdot d\vec{S}
+\end{gather}
+
+Stokes' Theorem states that the line integral of the tangential commponent of \(\vec{F}\) over the boundary curve is equal to the normal component of the curl of \(\vec{F}\) integrated over the surface.
+
+In particular, Green's Theorem is the special case where the surface lies in 2-dimensional \((x, z)\) space and the curl is in the direction \(\uvec{k}\).
+
+Just as the fundamental theorem of calculus and Green's Theorem, Stokes' Theorem connects a double integral over surface to a line integral about its boundary.
+
+Stokes' Theorem shows the conclusion that the amount of `spin' contained within a surface is equal to the amount that the boundary curve spins.
+
+\subsection*{Divergence Theorem}
+
+In a similar way to how Stokes' Theorem expanded upon the notion of Green's Theorem, the divergence theorem does the same, except adding up normal components rather than tangential.
+
+\begin{gather}
+    \iint_S \vec{F} \cdot d\vec{S} = \iiint_V \text{div}(\vec{F})\, dV
+\end{gather}
+
+The divergence theorem states that the divergence of a vector field within a volume is equal to the amount of inward or outward `push' experienced by the boundary surface. This notion of an inward or outward `push' to `expand or contract' is known as flux. The divergence theorem states that the flux across the boundary surface is equal to the volume integral of the divergence.
+
+The divergence expands upon the notion of a volume integral being reduced to a surface integral along the boundary. It is also a direct expansion of Green's Theorem, as well as taking a similar form to Stokes' Theorem, each accounting for one aspect of divergence and curl.
+
+\end{document}
